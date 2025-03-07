@@ -1,40 +1,52 @@
-/*Parametre la largeur de la carte et le '#' pour  */
-#map{height: 750px;}
+/* Supprimer marges et padding pour occuper toute la page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Empêche le défilement */
+}
 
-/*syliser la lengend*/
+/* La carte prend 100% de la page */
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 100% de la hauteur de l'écran */
+}
 
-.info.legend{
-    padding: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
-    background-color: white;
-    border-radius:8px ;
-    box-shadow: 0 0 20px rgba(0,0,0);
-    line-height: 2;
+/* Style de la légende */
+.info.legend {
+    padding: 12px;
+    font-size: 14px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    line-height: 1.5;
     color: black;
 }
 
-.info.legend i{
+.info.legend i {
+    width: 18px;
+    height: 18px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right:15px ;
-    vertical-align: middle;
-    border: 1px dashed #f7f7f7;
+    margin-right: 10px;
+    border: 1px solid #ddd;
 }
 
-.info.legend p{
-    font-size : 15px;
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#titre{
-    font-family:'Times New Roman', Times, serif ;
-    font-size: large;
+/* Style du titre */
+#titre {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
     font-weight: bold;
-    font-style: italic;
-    text-align: center;
+    color: #333;
     text-decoration: underline;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
 }
